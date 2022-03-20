@@ -1,5 +1,5 @@
 # WWTP-FTA
-Fault tree analysis of a wastewater treatment plant conducted in R
+Fault tree analysis of a wastewater treatment plant conducted in R. Made with the Faulttree package from: https://carlescg.github.io/FaultTreeTutoRial/basics.html
 
 TO DO: 
  Make a monte carlo simulation based on probabilities of O1-8 (As described in Taheriyoun & Moradinejad, 2015)
