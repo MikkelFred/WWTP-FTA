@@ -1,0 +1,18 @@
+# Chunk 7
+# Create a vector that samples each category according to their individual probabilities.
+N_vec_1year <- sample(x=c(1:4), size=m_ava_year, prob=tt_prob, replace=T)
+
+
+# Chunk 8
+# Now if we do the same, but this time we can sample a given year "n" amount of times. 
+
+Nyears <- 100000
+N_ji <- matrix(rep(0,Nyears*4), nrow=4)
+for (j in 1:Nyears){
+    N_vec_j <- sample(x=c(1:4), size=m_ava_year, prob=tt_prob, replace=T)
+    N_vec_1year_counts_i <- c()
+    for (i in 1:4){
+        N_vec_1year_counts_i = c(N_vec_1year_counts_i, sum(N_vec_j==i))
+    }
+    N_ji[,j] <- N_vec_1year_counts_i
+}
